@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Legacy North Management provides professional condominium management services throughout Niagara Region and surrounding communities.">
+    <title>Legacy North Management</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #1f2933;
+            background: #ffffff;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: min(1100px, 90%);
+            margin: 0 auto;
+        }
+
+        header {
+            background: #0b2545;
+            color: white;
+            padding: 18px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .brand {
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0b2545, #173f6d);
+            color: white;
+            padding: 110px 0;
+        }
+
+        .hero-content {
+            max-width: 760px;
+        }
+
+        .eyebrow {
+            color: #d7b56d;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.8rem);
+            line-height: 1.08;
+            margin-bottom: 22px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 650px;
+            color: #e5edf5;
+            margin-bottom: 34px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #c8a45d;
+            color: #0b2545;
+            text-decoration: none;
+            font-weight: 700;
+            padding: 14px 22px;
+            border-radius: 4px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-heading {
+            max-width: 700px;
+            margin-bottom: 40px;
+        }
+
+        .section-heading h2 {
+            color: #0b2545;
+            font-size: 2.2rem;
+            margin-bottom: 14px;
+        }
+
+        .section-heading p {
+            color: #596775;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .highlight-box {
+            background: #f2f5f8;
+            border-left: 5px solid #c8a45d;
+            padding: 28px;
+        }
+
+        .services {
+            background: #f6f8fa;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 28px;
+            border: 1px solid #dde4ea;
+            border-radius: 6px;
+        }
+
+        .service-card h3 {
+            color: #0b2545;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #596775;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px 40px;
+        }
+
+        .why-item {
+            border-top: 2px solid #c8a45d;
+            padding-top: 16px;
+        }
+
+        .why-item h3 {
+            color: #0b2545;
+            margin-bottom: 6px;
+        }
+
+        .contact {
+            background: #0b2545;
+            color: white;
+        }
+
+        .contact h2 {
+            color: white;
+        }
+
+        .contact p {
+            color: #dce6ef;
+        }
+
+        .contact-card {
+            margin-top: 30px;
+            background: rgba(255,255,255,0.08);
+            padding: 28px;
+            border-radius: 6px;
+            max-width: 600px;
+        }
+
+        .contact-card a {
+            color: #f0d18d;
+            text-decoration: none;
+        }
+
+        footer {
+            background: #071a30;
+            color: #bcc8d3;
+            text-align: center;
+            padding: 22px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 800px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 80px 0;
+            }
+
+            .about-grid,
+            .service-grid,
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="brand">LEGACY NORTH MANAGEMENT</div>
+
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="eyebrow">Niagara Region, Ontario</div>
+
+                    <h1>Professional condominium management, built on trust.</h1>
+
+                    <p>
+                        Practical guidance, responsive communication and responsible
+                        stewardship for condominium Boards and communities.
+                    </p>
+
+                    <a class="button" href="#contact">Contact Legacy North</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>About Legacy North</h2>
+                </div>
+
+                <div class="about-grid">
+                    <div>
+                        <p>
+                            Legacy North Management provides professional condominium
+                            management services with a focus on clear communication,
+                            sound financial administration and practical support for
+                            Boards of Directors.
+                        </p>
+
+                        <br>
+
+                        <p>
+                            We work collaboratively with condominium communities to
+                            protect property values, coordinate operations and help
+                            Boards make informed decisions.
+                        </p>
+                    </div>
+
+                    <div class="highlight-box">
+                        <strong>Our approach</strong>
+                        <p>
+                            Responsive, transparent and tailored to the needs of each
+                            condominium corporation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Management services</h2>
+                    <p>
+                        Reliable administrative, operational and governance support
+                        for condominium corporations.
+                    </p>
+                </div>
+
+                <div class="service-grid">
+                    <div class="service-card">
+                        <h3>Board Support</h3>
+                        <p>
+                            Meeting coordination, agendas, minutes, governance support
+                            and assistance implementing Board decisions.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>Financial Administration</h3>
+                        <p>
+                            Budget preparation, financial reporting, arrears oversight
+                            and responsible reserve fund planning.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>Property Operations</h3>
+                        <p>
+                            Contractor coordination, maintenance oversight, inspections
+                            and day-to-day operational management.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>Capital Projects</h3>
+                        <p>
+                            Support with major repairs, tendering, contractor communication
+                            and project coordination.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>Owner Communication</h3>
+                        <p>
+                            Clear notices, timely correspondence and professional handling
+                            of owner and resident concerns.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>Compliance</h3>
+                        <p>
+                            Assistance with condominium legislation, governing documents,
+                            rules, records and annual meeting requirements.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Why Legacy North</h2>
+                </div>
+
+                <div class="why-grid">
+                    <div class="why-item">
+                        <h3>Responsive communication</h3>
+                        <p>Boards receive direct, timely and practical support.</p>
+                    </div>
+
+                    <div class="why-item">
+                        <h3>Experienced leadership</h3>
+                        <p>Professional condominium management grounded in real-world experience.</p>
+                    </div>
+
+                    <div class="why-item">
+                        <h3>Financial stewardship</h3>
+                        <p>Careful budgeting and responsible oversight of corporation funds.</p>
+                    </div>
+
+                    <div class="why-item">
+                        <h3>Personalized service</h3>
+                        <p>Management tailored to the size, priorities and needs of each community.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Contact Legacy North</h2>
+                    <p>
+                        For inquiries about condominium management services, contact:
+                    </p>
+                </div>
+
+                <div class="contact-card">
+                    <strong>James North, OLCM</strong>
+                    <p>Legacy North Management</p>
+                    <p>
+                        Email:
+                        <a href="mailto:james@legacynorthmanagement.ca">
+                            james@legacynorthmanagement.ca
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        © 2026 Legacy North Management. All rights reserved.
+    </footer>
+</body>
+</html>
