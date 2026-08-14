@@ -3,10 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Legacy North Management provides professional condominium management services throughout Niagara Region and surrounding communities.">
+
+    <meta
+        name="description"
+        content="Legacy North Management provides professional condominium management services throughout Niagara Region and surrounding communities."
+    >
+
     <title>Legacy North Management</title>
 
     <style>
+        :root {
+            --navy: #0b2545;
+            --navy-light: #173f6d;
+            --navy-dark: #071a30;
+            --gold: #c8a45d;
+            --gold-light: #ead8ae;
+            --text: #1f2933;
+            --muted: #5b6875;
+            --light-bg: #f6f8fa;
+            --border: #dce3e9;
+            --white: #ffffff;
+        }
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -18,24 +36,25 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            color: #1f2933;
-            background: #ffffff;
-            line-height: 1.6;
+            font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.65;
         }
 
         .container {
-            width: min(1100px, 90%);
+            width: min(1120px, 90%);
             margin: 0 auto;
         }
 
         header {
-            background: #0b2545;
-            color: white;
-            padding: 18px 0;
+            background: var(--navy);
+            color: var(--white);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         nav {
+            min-height: 76px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -43,99 +62,152 @@
         }
 
         .brand {
-            font-size: 1.25rem;
-            font-weight: 700;
-            letter-spacing: 0.04em;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .brand-logo {
+            display: block;
+            width: min(260px, 70vw);
+            height: auto;
         }
 
         .nav-links {
             display: flex;
-            gap: 24px;
+            gap: 28px;
             list-style: none;
         }
 
         .nav-links a {
-            color: white;
+            color: var(--white);
             text-decoration: none;
             font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .nav-links a:hover {
+            opacity: 1;
         }
 
         .hero {
-            background: linear-gradient(135deg, #0b2545, #173f6d);
-            color: white;
-            padding: 110px 0;
+            background:
+                radial-gradient(circle at top right, rgba(200, 164, 93, 0.18), transparent 34%),
+                linear-gradient(135deg, var(--navy), var(--navy-light));
+            color: var(--white);
+            padding: 108px 0 96px;
         }
 
         .hero-content {
-            max-width: 760px;
+            max-width: 790px;
         }
 
         .eyebrow {
-            color: #d7b56d;
-            font-size: 0.85rem;
-            font-weight: 700;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
             margin-bottom: 18px;
+            color: var(--gold-light);
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
         }
 
         h1 {
-            font-size: clamp(2.5rem, 6vw, 4.8rem);
+            margin-bottom: 24px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(2.6rem, 6vw, 4.9rem);
             line-height: 1.08;
-            margin-bottom: 22px;
+            font-weight: 600;
+            letter-spacing: -0.025em;
         }
 
         .hero p {
-            font-size: 1.2rem;
-            max-width: 650px;
-            color: #e5edf5;
+            max-width: 680px;
             margin-bottom: 34px;
+            color: #e3ebf2;
+            font-size: 1.17rem;
         }
 
         .button {
             display: inline-block;
-            background: #c8a45d;
-            color: #0b2545;
+            padding: 14px 23px;
+            border-radius: 4px;
+            background: var(--gold);
+            color: var(--navy);
             text-decoration: none;
             font-weight: 700;
-            padding: 14px 22px;
-            border-radius: 4px;
+        }
+
+        .credential-strip {
+            background: var(--navy-dark);
+            color: #dbe4ec;
+        }
+
+        .credential-content {
+            min-height: 58px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            text-align: center;
+            font-size: 0.94rem;
+            letter-spacing: 0.025em;
+        }
+
+        .credential-divider {
+            color: var(--gold);
         }
 
         section {
-            padding: 80px 0;
+            padding: 82px 0;
         }
 
         .section-heading {
-            max-width: 700px;
-            margin-bottom: 40px;
+            max-width: 720px;
+            margin-bottom: 42px;
         }
 
         .section-heading h2 {
-            color: #0b2545;
-            font-size: 2.2rem;
             margin-bottom: 14px;
+            color: var(--navy);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(2rem, 4vw, 2.55rem);
+            font-weight: 600;
         }
 
-        .section-heading p {
-            color: #596775;
+        .section-heading p,
+        .service-card p,
+        .why-item p {
+            color: var(--muted);
         }
 
         .about-grid {
             display: grid;
             grid-template-columns: 1.2fr 0.8fr;
-            gap: 50px;
+            gap: 54px;
             align-items: start;
         }
 
+        .about-copy p + p {
+            margin-top: 18px;
+        }
+
         .highlight-box {
+            padding: 30px;
+            border-left: 5px solid var(--gold);
             background: #f2f5f8;
-            border-left: 5px solid #c8a45d;
-            padding: 28px;
+        }
+
+        .highlight-box strong {
+            display: block;
+            margin-bottom: 9px;
+            color: var(--navy);
+            font-size: 1.08rem;
         }
 
         .services {
-            background: #f6f8fa;
+            background: var(--light-bg);
         }
 
         .service-grid {
@@ -145,56 +217,59 @@
         }
 
         .service-card {
-            background: white;
-            padding: 28px;
-            border: 1px solid #dde4ea;
+            padding: 29px;
+            border: 1px solid var(--border);
             border-radius: 6px;
+            background: var(--white);
         }
 
         .service-card h3 {
-            color: #0b2545;
             margin-bottom: 10px;
-        }
-
-        .service-card p {
-            color: #596775;
+            color: var(--navy);
+            font-size: 1.08rem;
         }
 
         .why-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 18px 40px;
+            gap: 24px 42px;
         }
 
         .why-item {
-            border-top: 2px solid #c8a45d;
             padding-top: 16px;
+            border-top: 2px solid var(--gold);
         }
 
         .why-item h3 {
-            color: #0b2545;
-            margin-bottom: 6px;
+            margin-bottom: 7px;
+            color: var(--navy);
+            font-size: 1.08rem;
         }
 
         .contact {
-            background: #0b2545;
-            color: white;
+            background: var(--navy);
+            color: var(--white);
         }
 
-        .contact h2 {
-            color: white;
+        .contact .section-heading h2 {
+            color: var(--white);
         }
 
-        .contact p {
+        .contact .section-heading p {
             color: #dce6ef;
         }
 
         .contact-card {
+            max-width: 620px;
             margin-top: 30px;
-            background: rgba(255,255,255,0.08);
-            padding: 28px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
             border-radius: 6px;
-            max-width: 600px;
+            background: rgba(255, 255, 255, 0.07);
+        }
+
+        .contact-card strong {
+            font-size: 1.1rem;
         }
 
         .contact-card a {
@@ -203,26 +278,48 @@
         }
 
         footer {
-            background: #071a30;
+            padding: 23px;
+            background: var(--navy-dark);
             color: #bcc8d3;
             text-align: center;
-            padding: 22px;
-            font-size: 0.9rem;
+            font-size: 0.88rem;
         }
 
         @media (max-width: 800px) {
+            nav {
+                min-height: 70px;
+            }
+
             .nav-links {
                 display: none;
             }
 
+            .brand-logo {
+                width: min(230px, 72vw);
+            }
+
             .hero {
-                padding: 80px 0;
+                padding: 78px 0 72px;
+            }
+
+            .credential-content {
+                padding: 13px 0;
+                flex-direction: column;
+                gap: 2px;
+            }
+
+            .credential-divider {
+                display: none;
             }
 
             .about-grid,
             .service-grid,
             .why-grid {
                 grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 68px 0;
             }
         }
     </style>
@@ -232,7 +329,13 @@
     <header>
         <div class="container">
             <nav>
-                <div class="brand">LEGACY NORTH MANAGEMENT</div>
+                <a class="brand" href="#top" aria-label="Legacy North Management home">
+                    <img
+                        class="brand-logo"
+                        src="legacy-north-logo.jpg"
+                        alt="Legacy North Management"
+                    >
+                </a>
 
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
@@ -243,23 +346,38 @@
         </div>
     </header>
 
-    <main>
+    <main id="top">
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <div class="eyebrow">Niagara Region, Ontario</div>
+                    <div class="eyebrow">
+                        Niagara Region and surrounding communities
+                    </div>
 
-                    <h1>Professional condominium management, built on trust.</h1>
+                    <h1>
+                        Professional condominium management, built on trust.
+                    </h1>
 
                     <p>
                         Practical guidance, responsive communication and responsible
                         stewardship for condominium Boards and communities.
                     </p>
 
-                    <a class="button" href="#contact">Contact Legacy North</a>
+                    <a class="button" href="#contact">
+                        Contact Legacy North
+                    </a>
                 </div>
+
             </div>
         </section>
+
+        <div class="credential-strip">
+            <div class="container credential-content">
+                <span>Ontario Licensed Condominium Manager</span>
+                <span class="credential-divider">•</span>
+                <span>Serving Niagara Region and surrounding communities</span>
+            </div>
+        </div>
 
         <section id="about">
             <div class="container">
@@ -268,7 +386,7 @@
                 </div>
 
                 <div class="about-grid">
-                    <div>
+                    <div class="about-copy">
                         <p>
                             Legacy North Management provides professional condominium
                             management services with a focus on clear communication,
@@ -276,20 +394,19 @@
                             Boards of Directors.
                         </p>
 
-                        <br>
-
                         <p>
                             We work collaboratively with condominium communities to
-                            protect property values, coordinate operations and help
-                            Boards make informed decisions.
+                            coordinate operations, support informed decision-making and
+                            help protect the long-term interests of each corporation.
                         </p>
                     </div>
 
                     <div class="highlight-box">
                         <strong>Our approach</strong>
+
                         <p>
-                            Responsive, transparent and tailored to the needs of each
-                            condominium corporation.
+                            Responsive, transparent and tailored to the priorities and
+                            needs of each condominium community.
                         </p>
                     </div>
                 </div>
@@ -300,6 +417,7 @@
             <div class="container">
                 <div class="section-heading">
                     <h2>Management services</h2>
+
                     <p>
                         Reliable administrative, operational and governance support
                         for condominium corporations.
@@ -309,6 +427,7 @@
                 <div class="service-grid">
                     <div class="service-card">
                         <h3>Board Support</h3>
+
                         <p>
                             Meeting coordination, agendas, minutes, governance support
                             and assistance implementing Board decisions.
@@ -317,6 +436,7 @@
 
                     <div class="service-card">
                         <h3>Financial Administration</h3>
+
                         <p>
                             Budget preparation, financial reporting, arrears oversight
                             and responsible reserve fund planning.
@@ -325,6 +445,7 @@
 
                     <div class="service-card">
                         <h3>Property Operations</h3>
+
                         <p>
                             Contractor coordination, maintenance oversight, inspections
                             and day-to-day operational management.
@@ -333,25 +454,28 @@
 
                     <div class="service-card">
                         <h3>Capital Projects</h3>
+
                         <p>
-                            Support with major repairs, tendering, contractor communication
-                            and project coordination.
+                            Support with major repairs, tendering, contractor
+                            communication and project coordination.
                         </p>
                     </div>
 
                     <div class="service-card">
                         <h3>Owner Communication</h3>
+
                         <p>
-                            Clear notices, timely correspondence and professional handling
-                            of owner and resident concerns.
+                            Clear notices, timely correspondence and professional
+                            handling of owner and resident concerns.
                         </p>
                     </div>
 
                     <div class="service-card">
                         <h3>Compliance</h3>
+
                         <p>
-                            Assistance with condominium legislation, governing documents,
-                            rules, records and annual meeting requirements.
+                            Assistance with condominium legislation, governing
+                            documents, rules, records and annual meeting requirements.
                         </p>
                     </div>
                 </div>
@@ -367,22 +491,37 @@
                 <div class="why-grid">
                     <div class="why-item">
                         <h3>Responsive communication</h3>
-                        <p>Boards receive direct, timely and practical support.</p>
+
+                        <p>
+                            Boards receive direct, timely and practical support.
+                        </p>
                     </div>
 
                     <div class="why-item">
                         <h3>Experienced leadership</h3>
-                        <p>Professional condominium management grounded in real-world experience.</p>
+
+                        <p>
+                            Professional condominium management grounded in practical,
+                            real-world experience.
+                        </p>
                     </div>
 
                     <div class="why-item">
                         <h3>Financial stewardship</h3>
-                        <p>Careful budgeting and responsible oversight of corporation funds.</p>
+
+                        <p>
+                            Careful budgeting and responsible oversight of corporation
+                            funds.
+                        </p>
                     </div>
 
                     <div class="why-item">
                         <h3>Personalized service</h3>
-                        <p>Management tailored to the size, priorities and needs of each community.</p>
+
+                        <p>
+                            Management tailored to the size, priorities and needs of
+                            each community.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -392,6 +531,7 @@
             <div class="container">
                 <div class="section-heading">
                     <h2>Contact Legacy North</h2>
+
                     <p>
                         For inquiries about condominium management services, contact:
                     </p>
@@ -400,6 +540,7 @@
                 <div class="contact-card">
                     <strong>James North, OLCM</strong>
                     <p>Legacy North Management</p>
+
                     <p>
                         Email:
                         <a href="mailto:james@legacynorthmanagement.ca">
