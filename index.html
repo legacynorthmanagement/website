@@ -206,6 +206,57 @@
             font-size: 1.08rem;
         }
 
+        .leadership {
+            padding-top: 0;
+        }
+
+        .leadership-card {
+            display: grid;
+            grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.28fr);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--white);
+            box-shadow: 0 18px 45px rgba(7, 26, 48, 0.08);
+        }
+
+        .leadership-photo {
+            width: 100%;
+            height: 100%;
+            min-height: 460px;
+            object-fit: cover;
+            object-position: center 24%;
+        }
+
+        .leadership-copy {
+            padding: 50px;
+            align-self: center;
+        }
+
+        .leadership-copy .eyebrow {
+            margin-bottom: 12px;
+            color: #8b6a2e;
+        }
+
+        .leadership-copy h2 {
+            margin-bottom: 7px;
+            color: var(--navy);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(2rem, 4vw, 2.7rem);
+            font-weight: 600;
+            line-height: 1.15;
+        }
+
+        .leadership-title {
+            margin-bottom: 23px;
+            color: var(--navy-light);
+            font-weight: 700;
+        }
+
+        .leadership-copy p + p {
+            margin-top: 17px;
+        }
+
         .services {
             background: var(--light-bg);
         }
@@ -277,6 +328,31 @@
             text-decoration: none;
         }
 
+        .contact-details {
+            display: grid;
+            gap: 10px;
+            margin-top: 18px;
+        }
+
+        .contact-line {
+            display: grid;
+            grid-template-columns: 95px 1fr;
+            gap: 12px;
+        }
+
+        .contact-label {
+            color: #dce6ef;
+            font-weight: 700;
+        }
+
+        .emergency-note {
+            margin-top: 18px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.13);
+            color: #dce6ef;
+            font-size: 0.9rem;
+        }
+
         footer {
             padding: 23px;
             background: var(--navy-dark);
@@ -313,9 +389,26 @@
             }
 
             .about-grid,
+            .leadership-card,
             .service-grid,
             .why-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .leadership-photo {
+                min-height: 0;
+                max-height: 560px;
+                aspect-ratio: 4 / 5;
+                object-position: center 20%;
+            }
+
+            .leadership-copy {
+                padding: 34px 28px 38px;
+            }
+
+            .contact-line {
+                grid-template-columns: 1fr;
+                gap: 0;
             }
 
             section {
@@ -339,6 +432,7 @@
 
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
+                    <li><a href="#leadership">Meet James</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -407,6 +501,43 @@
                         <p>
                             Responsive, transparent and tailored to the priorities and
                             needs of each condominium community.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="leadership" id="leadership">
+            <div class="container">
+                <div class="leadership-card">
+                    <img
+                        class="leadership-photo"
+                        src="james-north.jpg"
+                        alt="James North, President of Legacy North Management"
+                    >
+
+                    <div class="leadership-copy">
+                        <div class="eyebrow">Leadership</div>
+
+                        <h2>James North, OLCM</h2>
+
+                        <div class="leadership-title">
+                            President, Legacy North Management
+                        </div>
+
+                        <p>
+                            James is an Ontario Licensed Condominium Manager with
+                            hands-on experience supporting condominium corporations
+                            throughout Niagara Region and surrounding communities.
+                            He founded Legacy North Management to provide Boards with
+                            responsive, practical and accountable management.
+                        </p>
+
+                        <p>
+                            James remains directly involved in each community he
+                            manages, working closely with Boards, owners and service
+                            providers to oversee daily operations, financial planning,
+                            major projects and long-term priorities.
                         </p>
                     </div>
                 </div>
@@ -541,11 +672,28 @@
                     <strong>James North, OLCM</strong>
                     <p>Legacy North Management</p>
 
-                    <p>
-                        Email:
-                        <a href="mailto:james@legacynorthmanagement.ca">
-                            james@legacynorthmanagement.ca
-                        </a>
+                    <div class="contact-details">
+                        <div class="contact-line">
+                            <span class="contact-label">Email</span>
+                            <a href="mailto:james@legacynorthmanagement.ca">
+                                james@legacynorthmanagement.ca
+                            </a>
+                        </div>
+
+                        <div class="contact-line">
+                            <span class="contact-label">Main</span>
+                            <a href="tel:+12894140385">289-414-0385</a>
+                        </div>
+
+                        <div class="contact-line">
+                            <span class="contact-label">Emergency</span>
+                            <a href="tel:+12894140408">289-414-0408</a>
+                        </div>
+                    </div>
+
+                    <p class="emergency-note">
+                        The emergency line is for urgent after-hours property
+                        emergencies requiring immediate attention.
                     </p>
                 </div>
             </div>
