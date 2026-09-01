@@ -160,6 +160,14 @@
             opacity: 1;
         }
 
+        .nav-links .nav-order-link {
+            padding-bottom: 4px;
+            border-bottom: 2px solid var(--gold);
+            color: var(--gold-light);
+            font-weight: 700;
+            opacity: 1;
+        }
+
         .hero {
             background:
                 radial-gradient(circle at top right, rgba(200, 164, 93, 0.18), transparent 34%),
@@ -365,6 +373,44 @@
             font-size: 1.08rem;
         }
 
+        .status-certificates {
+            background: var(--light-bg);
+        }
+
+        .status-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+            padding: 38px 40px;
+            border: 1px solid var(--border);
+            border-left: 5px solid var(--gold);
+            border-radius: 6px;
+            background: var(--white);
+            box-shadow: 0 14px 34px rgba(7, 26, 48, 0.07);
+        }
+
+        .status-copy {
+            max-width: 720px;
+        }
+
+        .status-copy h2 {
+            margin-bottom: 12px;
+            color: var(--navy);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(1.8rem, 4vw, 2.35rem);
+            font-weight: 600;
+        }
+
+        .status-copy p {
+            color: var(--muted);
+        }
+
+        .status-button {
+            flex-shrink: 0;
+            text-align: center;
+        }
+
         .contact {
             background: var(--navy);
             color: var(--white);
@@ -463,6 +509,13 @@
                 grid-template-columns: 1fr;
             }
 
+            .status-card {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 25px;
+                padding: 31px 28px;
+            }
+
             .leadership-photo {
                 min-height: 0;
                 max-height: 560px;
@@ -502,6 +555,11 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#leadership">Meet James</a></li>
                     <li><a href="#services">Services</a></li>
+                    <li>
+                        <a class="nav-order-link" href="#status-certificates">
+                            Order a Status Certificate
+                        </a>
+                    </li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -722,6 +780,32 @@
                             each community.
                         </p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="status-certificates" id="status-certificates">
+            <div class="container">
+                <div class="status-card">
+                    <div class="status-copy">
+                        <h2>Order a Status Certificate</h2>
+
+                        <p>
+                            Status certificates for condominium corporations managed
+                            by Legacy North Management can be ordered securely online
+                            through Conduit. Search for the condominium corporation or
+                            property address to begin your order.
+                        </p>
+                    </div>
+
+                    <a
+                        class="button status-button"
+                        href="https://order.statuscertificate.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Order Through Conduit
+                    </a>
                 </div>
             </div>
         </section>
